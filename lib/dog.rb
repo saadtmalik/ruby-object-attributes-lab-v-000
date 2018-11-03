@@ -5,21 +5,16 @@ class Dog
     @breed = breed
   end
 
+  def name=(new_name_and_breed)
+    name, breed =new_name_and_breed.split
+    @name = name
+    @breed = breed
+  end
+
   def name
-    @name
-  end
-
-  def name=(new_name)
-    name=new_name
-  end
-
-  def breed
-    @breed
-  end
-
-  def breed=(new_breed)
-    name=new_breed
+    "#{@name} #{@breed}".strip
   end
 end
 
-fido=Dog.new("Fido", "Beagle")
+
+fido = Dog.new("Fido", "Beagle")
